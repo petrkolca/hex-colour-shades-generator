@@ -23,9 +23,10 @@ export const StyledButton = styled.button`
   &:hover {
     border-color: #FFD266;
   }
-  &:focus {
+  &:focus,
+  &:focus:not(:focus-visible) {
     outline: none;
-    /* box-shadow: none; */
+    box-shadow: none;
   }
   &:focus-visible {
     outline-color: #7d76d7;

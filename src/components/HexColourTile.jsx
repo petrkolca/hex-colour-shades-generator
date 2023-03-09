@@ -1,15 +1,17 @@
 import { useState } from "react";
 import { ColorTile } from "./styles/HexColorTile.styled";
-import rgbToHex from "./utils/utils";
+import { getContrastColor, rgbToHex } from "./utils/utils";
 
 
 const HexColourTile = ({ rgb, weight, index, hexColor }) => {
   const bgColor = rgb.join(",");
-  const hex = rgbToHex(...rgb)
+  const hex = rgbToHex(...rgb);
+  const hexValue = `#${hexColor}`;
+  const textColor = getContrastColor(hexColor);
 
 
   return (
-    <ColorTile className={`color`} bcg={bgColor}>
+    <ColorTile className={`color`} bcg={bgColor} txtColor={textColor}>
       <p className="percent-value">{weight}%</p>
       <p className="color-value">{hex}</p>
     </ColorTile>

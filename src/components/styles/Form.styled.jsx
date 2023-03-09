@@ -33,9 +33,16 @@ export const StyledInput = styled.input`
   font-size: 1.2rem;
   border-top-left-radius: var(--radius);
   border-bottom-left-radius: var(--radius);
+  outline: none !important;
+  outline-width: 0;
+  box-shadow: none;
+
+  &:focus:not(:focus-visible) {
+    box-shadow: 0 0 0 5px transparent;
+  }
 
   &:focus-visible {
-    outline: none;
+    outline-color: #7d76d7;
     box-shadow: 0 0 0 5px rgb(125, 118, 215, 0.5);
   }
 

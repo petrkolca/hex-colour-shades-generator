@@ -39,6 +39,10 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
 
+  *:focus:not(.focus-visible) {
+    outline: none;
+  }
+
   body {
     background-image: linear-gradient(to bottom, #f7e9e2, #dadef1 , hsla(20,57%,93%,0));
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
