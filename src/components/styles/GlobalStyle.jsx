@@ -90,16 +90,13 @@ export const GlobalStyle = createGlobalStyle`
   
   @media screen and (min-width: 800px) {
     h1 {
-      font-size: 4rem;
-    }
-    h2 {
       font-size: 2.5rem;
     }
-    h3 {
-      font-size: 1.75rem;
+    h2 {
+      font-size: 2rem;
     }
-    h4 {
-      font-size: 1rem;
+    h3, h4 {
+      font-size: 1.75rem;
     }
     body {
       font-size: 1rem;
