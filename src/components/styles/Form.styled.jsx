@@ -4,7 +4,8 @@ export const StyledFormCtn = styled.section`
   
   display: flex;
   flex-direction: column;
-  margin-bottom: 3rem !important;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
   
   h1 {
     margin-bottom: 0.85rem;

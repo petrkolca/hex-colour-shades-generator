@@ -46,10 +46,7 @@ export const GlobalStyle = createGlobalStyle`
     line-height: 1.5;
     font-weight: 400;
     margin: 0;
-    display: flex;
-    place-items: center;
     min-width: 320px;
-    min-height: 100vh;
   }
 
   ul {
@@ -90,13 +87,13 @@ export const GlobalStyle = createGlobalStyle`
   
   @media screen and (min-width: 800px) {
     h1 {
-      font-size: 2.5rem;
+      font-size: 2.3rem;
     }
     h2 {
-      font-size: 2rem;
+      font-size: 1.85rem;
     }
     h3, h4 {
-      font-size: 1.75rem;
+      font-size: 1.35rem;
     }
     body {
       font-size: 1rem;
@@ -113,27 +110,31 @@ export const GlobalStyle = createGlobalStyle`
   main {
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
   }
 
   .section {
     width: 90vw;
     margin: 0 auto;
-    padding: 0 15px;
+    padding-left: 15px;
+    padding-right: 15px;
     max-width: var(--max-width);
   }
 
   @media screen and (min-width: 992px) {
     .section {
       width: 95vw;
-      padding: 0 2vw;
+      padding-left: 2vw;
+      padding-right: 2vw;
     }
   }
 
   .colors-list {
-    min-height: calc(100vh - 100px);
+    ${'' /* min-height: calc(100vh - 100px); */}
+    flex: 1;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(223.33px, 1fr));
-    grid-template-rows: repeat(auto-fit, minmax(96px, 1fr));
+    ${'' /* grid-template-rows: repeat(auto-fit, minmax(96px, 1fr)); */}
   }
 
   @media (prefers-color-scheme: light) {

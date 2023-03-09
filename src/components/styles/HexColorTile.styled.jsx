@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const ColorTile = styled.div`
 
+  background-color: rgb(${props => props.bcg});
   padding: 1rem 2rem;
   cursor: pointer;
   font-size: 1rem;

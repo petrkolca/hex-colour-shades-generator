@@ -53,13 +53,14 @@ function App() {
           onChange={onChangeHandler} 
           errorState={error}
         />
+
         <section className="colors-list">
-          <h2>list of Hex colours shades</h2>
           {list.map((color, index) => {
             return (
               <HexColourTile 
                 key={index}
                 index={index}
+                hexColor={color.hex}
                 {...color} 
                 />
             )
