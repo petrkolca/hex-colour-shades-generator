@@ -129,6 +129,13 @@ export const GlobalStyle = createGlobalStyle`
     }
   }
 
+  .colors-list {
+    min-height: calc(100vh - 100px);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(223.33px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(96px, 1fr));
+  }
+
   @media (prefers-color-scheme: light) {
     :root {
       color: #393082;
