@@ -1,14 +1,29 @@
+import { useEffect } from "react";
 import Button from "./Button";
-import Input from "./Input";
-import { StyledFormCtn } from "./styles/Form.styled";
+import { StyledFormCtn, StyledInput } from "./styles/Form.styled";
 
-const StyledForm = (props) => {
+const StyledForm = ({className, inputValue, onSubmit, onChange}) => {
+
+  const onChangeHandler = (e) => {
+    onChange(e.target.value);
+    console.log('onChange is: ', e.target.value);  
+  };
+
+  useEffect(() => {
+
+    console.log('input value is: ', inputValue);
+  }, [inputValue])
+  
   return (
     <>
-      <StyledFormCtn className={props.className}>
+      <StyledFormCtn className={className}>
         <h1>Hex Color Generator</h1>
-        <form action="">
-          <Input />
+        <form onSubmit={onSubmit}>
+          <StyledInput 
+            type="text"
+            value={inputValue}
+            onChange={onChangeHandler}
+          />
           <Button />
         </form>
       </StyledFormCtn>

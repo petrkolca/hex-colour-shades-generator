@@ -10,10 +10,16 @@ function App() {
   const [error, setError] = useState(false);
   const [list, setList] = useState([]);
 
+  const onChangeHandler = (input) => {
+    setColor(input);
+
+    console.log("color is: ",input);
+  };
+
   const submitHandler = (e) => {
     e.preventDefault();
 
-    console.log("color: ", color);
+    // console.log("color: ", color);
   }
 
 
@@ -21,7 +27,12 @@ function App() {
     <Fragment>
       <GlobalStyle />
       <main>
-        <StyledForm className="section" />
+        <StyledForm
+          className="section"
+          inputValue={color}
+          onSubmit={submitHandler} 
+          onChange={onChangeHandler} 
+        />
         <section className="section">
           <h2>list of Hex colours shades</h2>
         </section>
