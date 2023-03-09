@@ -23,9 +23,14 @@ export const StyledButton = styled.button`
   &:hover {
     border-color: #FFD266;
   }
-  &:focus,
+  &:focus {
+    outline: none;
+    /* box-shadow: none; */
+  }
   &:focus-visible {
-    outline: 4px auto -webkit-focus-ring-color;
+    outline-color: #7d76d7;
+    outline: none;
+    box-shadow: 0 0 0 5px rgb(125, 118, 215, 0.5);
   }
 
   @media (prefers-color-scheme: light) {

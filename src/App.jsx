@@ -1,5 +1,4 @@
 import { Fragment, useState } from "react"
-import Button from "./components/Button"
 import Values from "values.js"
 import { GlobalStyle } from "./components/styles/GlobalStyle"
 import StyledForm from "./components/Form"
@@ -11,15 +10,30 @@ function App() {
   const [list, setList] = useState([]);
 
   const onChangeHandler = (input) => {
-    setColor(input);
+    setColor(input.toString());
 
-    console.log("color is: ",input);
+    // console.log("color is: ",input);
   };
 
   const submitHandler = (e) => {
     e.preventDefault();
 
-    // console.log("color: ", color);
+    try {
+
+      
+      if (!color) {
+        throw new Error('Missing Error in Input!');
+      }
+
+      let colors = new Values(color).all(10);
+
+      console.log("colors list: ", colors);
+      
+    } catch (error) {
+      setError(true);
+      console.log('error is: ', error.message);
+    }
+
   }
 
 
@@ -32,6 +46,7 @@ function App() {
           inputValue={color}
           onSubmit={submitHandler} 
           onChange={onChangeHandler} 
+          errorState={error}
         />
         <section className="section">
           <h2>list of Hex colours shades</h2>

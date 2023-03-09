@@ -33,8 +33,13 @@ export const StyledInput = styled.input`
   border-top-left-radius: var(--radius);
   border-bottom-left-radius: var(--radius);
 
+  &:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 5px rgb(125, 118, 215, 0.5);
+  }
+
   &.error {
-    border: 2px solid var(--clr-red-dark);
+    border: 2px solid #EF233C;
   }
 
   @media screen and (max-width: 576px) {
