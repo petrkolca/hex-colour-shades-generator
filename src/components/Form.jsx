@@ -8,11 +8,6 @@ const StyledForm = ({className, inputValue, onSubmit, onChange}) => {
     onChange(e.target.value);
     console.log('onChange is: ', e.target.value);  
   };
-
-  useEffect(() => {
-
-    console.log('input value is: ', inputValue);
-  }, [inputValue])
   
   return (
     <>
@@ -22,9 +17,10 @@ const StyledForm = ({className, inputValue, onSubmit, onChange}) => {
           <StyledInput 
             type="text"
             value={inputValue}
+            placeholder="#393082"
             onChange={onChangeHandler}
           />
-          <Button />
+          <Button type="submit">Submit</Button>
         </form>
       </StyledFormCtn>
     </>

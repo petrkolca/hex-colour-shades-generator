@@ -4,11 +4,10 @@ export const StyledFormCtn = styled.section`
   
   display: flex;
   flex-direction: column;
-  margin-bottom: 4rem;
+  margin-bottom: 3rem !important;
   
   h1 {
     margin-bottom: 0.85rem;
-    margin-right: 2rem;
   }
   
   form {
@@ -22,6 +21,7 @@ export const StyledFormCtn = styled.section`
 
     h1 {
       margin-bottom: 0;
+      margin-right: 2rem;
     }
   }
 `
