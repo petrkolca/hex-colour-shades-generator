@@ -1,5 +1,7 @@
 import { Fragment, useState } from 'react'
+import Button from './components/Button'
 import { GlobalStyle } from './components/styles/GlobalStyle'
+
 
 function App() {
 
@@ -7,7 +9,9 @@ function App() {
     <Fragment>
       <GlobalStyle />
       <main>
-        <h2>Hex Color Generator</h2>
+        <section className="section">
+          <h1>Hex Color Generator</h1>
+        </section>
       </main>
     </Fragment>
   )
