@@ -5,10 +5,16 @@ import StyledForm from "./components/Form"
 import HexColourTile from "./components/HexColourTile"
 
 
+const initialColorHueValue = () => {
+  // set default colour Hue with 10/100 shades
+  return new Values("#393082").all(12.5);
+}
+
 function App() {
   const [color, setColor] = useState("");
   const [error, setError] = useState(false);
-  const [list, setList] = useState([]);
+  // setting up list with default inital Value on app load
+  const [list, setList] = useState(initialColorHueValue);
 
   const onChangeHandler = (input) => {
     setColor(input);
@@ -21,12 +27,12 @@ function App() {
 
     try {
       setError(false);
-      
+
       if (!color) {
         throw new Error('Missing Error in Input!');
       }
       
-      let colors = new Values(color).all(10);
+      let colors = new Values(color).all(12.5);
       
       if (!colors) {
         throw new Error('Input HEX value is incorect!');

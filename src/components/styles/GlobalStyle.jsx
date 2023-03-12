@@ -44,7 +44,8 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    background-image: linear-gradient(to bottom, #f7e9e2, #dadef1 , hsla(20,57%,93%,1));
+    ${'' /* background-image: linear-gradient(to bottom, #f7e9e2, #dadef1 , hsla(20,57%,93%,1)); */}
+    background-image: linear-gradient(180deg, hsla(244, 100%, 97%, 1) 0%, hsla(246, 55%, 83%, 1) 50%, hsla(246, 43%, 73%, 1) 100%);
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     font-size: 0.875rem;
     line-height: 1.5;
