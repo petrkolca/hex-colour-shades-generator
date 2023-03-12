@@ -14,6 +14,7 @@ const HexColourTile = ({ rgb, weight, index, hexColor }) => {
     <ColorTile className={`color`} bcg={bgColor} txtColor={textColor}>
       <p className="percent-value">{weight}%</p>
       <p className="color-value">{hex}</p>
+      {alert && <p className="alert">Copied to clipboard</p>}
     </ColorTile>
   );
 }

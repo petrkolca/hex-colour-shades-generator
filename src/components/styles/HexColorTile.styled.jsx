@@ -17,4 +17,11 @@ export const ColorTile = styled.div`
     color: inherit;
     margin-bottom: 0;
   }
+
+  .alert {
+    text-transform: uppercase;
+    font-size: 0.65rem;
+    margin-top: 0.5rem;
+    color: ${props => props.txtColor === '#ffffff' ? '#b1b1b1' : "#393082"};
+  }
 `

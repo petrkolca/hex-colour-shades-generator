@@ -31,6 +31,6 @@ export const getContrastColor = (hexColor) => {
 
   console.log('brightness of colour: ', brightness);
   // If the brightness is greater than 128, the color is light; otherwise, it's dark
-  return brightness > 128 ? '#242424' : '#ffffff';
+  return brightness > 128 ? '#393082' : '#ffffff';
 }
 

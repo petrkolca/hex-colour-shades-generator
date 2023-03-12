@@ -20,6 +20,7 @@ function App() {
     e.preventDefault();
 
     try {
+      setError(false);
       
       if (!color) {
         throw new Error('Missing Error in Input!');
