@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ColorTile } from "./styles/HexColorTile.styled";
 import { getContrastColor, rgbToHex } from "./utils/utils";
 
@@ -17,6 +17,18 @@ const HexColourTile = ({ rgb, weight, index, hexColor }) => {
     //copy current HEX colour value to clipboard
     navigator.clipboard.writeText(hex);
   }
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setAlert(false);
+      
+    }, 1500);
+    
+    // Clean-up function to clear Alert
+    return () => clearInterval(timeout);
+
+  }, [alert]);
+
   return (
     <ColorTile 
       className={`color`} 
